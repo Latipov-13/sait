@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CodeSchool</title>
+
+  <!-- Подключаем шрифт -->
+  <link rel="preload" as="font" href="fonts/inter.woff2" type="font/woff2" crossorigin="anonymous">
+  <style>
+    @font-face {
+      font-family: 'Inter';
+      src: url('fonts/inter.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
+
+  <!-- Подключаем стили -->
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+<body class="dark-mode">
+
+  <!-- Контент сайта -->
+
+  <button id="theme-toggle">🌞 Светлая тема</button>
+
+  <header class="sticky-header">
+    <div class="logo">CodeSchool</div>
+    <nav>
+      <ul class="desktop-nav">
+        <li><a href="#courses">Курсы</a></li>
+        <li><a href="#features">Особенности</a></li>
+        <li><a href="#register" class="btn">Регистрация</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="blob"></div>
+    <div class="content">
+      <h1>Освой программирование уже сегодня</h1>
+      <p>Бесплатная платформа для школьников, где ты сможешь освоить базовые навыки программирования.</p>
+      <a href="#courses" class="btn">Погрузиться в код</a>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+  <section class="courses" id="courses">
+    <!-- Здесь контент по языкам как в предыдущих версиях -->
+    <!-- Вставь сюда блоки Python, HTML, CSS из предыдущего ответа -->
+  </section>
+
+  <!-- Registration Form -->
+  <section class="register" id="register">
+    <h2>Регистрация</h2>
+    <form id="registration-form">
+      <input type="text" placeholder="Имя" required />
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Пароль" required />
+      <button type="submit" class="btn">Зарегистрироваться</button>
+      <p class="form-result"></p>
+    </form>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <!-- Здесь контент секции "Особенности" -->
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Готов начать?</h2>
+    <p>Присоединяйся к тысячам школьников, которые уже начали свой путь в программировании.</p>
+    <a href="#courses" class="btn">Начать обучение бесплатно</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 CodeSchool for Students. Все права защищены.
+  </footer>
+
+  <!-- Подключаем JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>

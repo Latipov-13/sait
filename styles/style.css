@@ -1,0 +1,30 @@
+/* Уже подключен через preload и font-face в index.html */
+
+:root {
+  --bg-color: #121212;
+  --text-color: white;
+  --card-bg: #1e1e1e;
+  --accent: linear-gradient(to right, #4f46e5, #9333ea);
+}
+
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: white;
+  --card-bg: #1e1e1e;
+}
+
+.light-mode {
+  --bg-color: #f9fafb;
+  --text-color: #111827;
+  --card-bg: #ffffff;
+  --accent: linear-gradient(to right, #4f46e5, #9333ea);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Таблицы, формы, кнопки и т.п. — см. полный файл выше */
