@@ -17,18 +17,19 @@
     }
   </style>
 
-  <!-- Подключаем стили -->
-  <link rel="stylesheet" href="style/style.css" />
+  <!-- Подключаем стиль -->
+  <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body class="dark-mode">
 
-  <!-- Контент сайта -->
-
+  <!-- Theme Toggle -->
   <button id="theme-toggle">🌞 Светлая тема</button>
 
-  <header class="sticky-header">
+  <!-- Header -->
+  <header class="sticky-header" role="banner">
+    <h1 class="visually-hidden">CodeSchool — онлайн школа программирования</h1>
     <div class="logo">CodeSchool</div>
-    <nav>
+    <nav aria-label="Основная навигация">
       <ul class="desktop-nav">
         <li><a href="#courses">Курсы</a></li>
         <li><a href="#features">Особенности</a></li>
@@ -38,51 +39,199 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hero">
-    <div class="blob"></div>
-    <div class="content">
-      <h1>Освой программирование уже сегодня</h1>
-      <p>Бесплатная платформа для школьников, где ты сможешь освоить базовые навыки программирования.</p>
-      <a href="#courses" class="btn">Погрузиться в код</a>
-    </div>
-  </section>
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="content">
+        <h2 id="hero-heading">Освой программирование уже сегодня</h2>
+        <p>Бесплатная платформа для школьников, где ты сможешь освоить базовые навыки программирования.</p>
+        <a href="#courses" class="btn">Погрузиться в код</a>
+      </div>
+    </section>
 
-  <!-- Courses Section -->
-  <section class="courses" id="courses">
-    <!-- Здесь контент по языкам как в предыдущих версиях -->
-    <!-- Вставь сюда блоки Python, HTML, CSS из предыдущего ответа -->
-  </section>
+    <!-- Courses Section -->
+    <section class="courses" id="courses" aria-labelledby="courses-heading">
+      <h2 id="courses-heading">Выбери свой путь</h2>
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-lang="python" role="tab" aria-selected="true" aria-controls="python-tab">Python</button>
+        <button class="tab" data-lang="html" role="tab" aria-selected="false" aria-controls="html-tab">HTML</button>
+        <button class="tab" data-lang="css" role="tab" aria-selected="false" aria-controls="css-tab">CSS</button>
+      </div>
 
-  <!-- Registration Form -->
-  <section class="register" id="register">
-    <h2>Регистрация</h2>
-    <form id="registration-form">
-      <input type="text" placeholder="Имя" required />
-      <input type="email" placeholder="Email" required />
-      <input type="password" placeholder="Пароль" required />
-      <button type="submit" class="btn">Зарегистрироваться</button>
-      <p class="form-result"></p>
-    </form>
-  </section>
+      <div class="course-content" role="tabpanel" id="python-tab" tabindex="0">
+        <!-- Python -->
+        <div class="language-section python active">
+          <div class="lang-info">
+            <h3>Python</h3>
+            <p>Python — это простой и мощный язык программирования с читаемым синтаксисом. Идеален для новичков и используется в разработке, анализе данных, машинном обучении и автоматизации.</p>
+            <ul>
+              <li>✅ Простота изучения и использования</li>
+              <li>✅ Широкая экосистема библиотек</li>
+              <li>✅ Подходит для анализа данных и AI</li>
+              <li>✅ Много ресурсов и сообщества</li>
+            </ul>
+          </div>
+          <div class="code-block">
+            <pre><code># Пример кода на Python
+print("Привет, мир!")
+for i in range(5):
+    print(i)</code></pre>
+          </div>
+          <div class="video-placeholder">
+            <h4>Видеоурок</h4>
+            <div class="video-container">
+              <p>Место для видеоурока</p>
+            </div>
+          </div>
+          <div class="quiz">
+            <h4>Тест по Python</h4>
+            <form class="quiz-form">
+              <label for="q1">Какой символ вывода в Python?</label>
+              <select id="q1" name="q1" required>
+                <option value="">-- Выберите --</option>
+                <option value="print()">print()</option>
+                <option value="console.log()">console.log()</option>
+                <option value="echo">echo</option>
+              </select>
+              <button type="submit" class="btn small">Проверить</button>
+              <p class="result-message" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
 
-  <!-- Features Section -->
-  <section class="features" id="features">
-    <!-- Здесь контент секции "Особенности" -->
-  </section>
+        <!-- HTML -->
+        <div class="language-section html">
+          <div class="lang-info">
+            <h3>HTML</h3>
+            <p>HTML (HyperText Markup Language) — основной строительный блок любого сайта. Он отвечает за структуру содержимого веб-страницы.</p>
+            <ul>
+              <li>✅ Язык разметки, а не программирования</li>
+              <li>✅ Используется вместе с CSS и JavaScript</li>
+              <li>✅ Понятен браузерам и людям</li>
+              <li>✅ Важно знать каждому веб-разработчику</li>
+            </ul>
+          </div>
+          <div class="code-block">
+            <pre><code><!-- Пример HTML -->
+<h1>Заголовок</h1>
+<p>Абзац текста.</p></code></pre>
+          </div>
+          <div class="video-placeholder">
+            <h4>Видеоурок</h4>
+            <div class="video-container">
+              <p>Место для видеоурока</p>
+            </div>
+          </div>
+          <div class="quiz">
+            <h4>Тест по HTML</h4>
+            <form class="quiz-form">
+              <label for="q2">Какой тег определяет заголовок?</label>
+              <select id="q2" name="q2" required>
+                <option value="">-- Выберите --</option>
+                <option value="h1"><h1></option>
+                <option value="p"><p></option>
+                <option value="div"><div></option>
+              </select>
+              <button type="submit" class="btn small">Проверить</button>
+              <p class="result-message" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
 
-  <!-- CTA -->
-  <section class="cta">
-    <h2>Готов начать?</h2>
-    <p>Присоединяйся к тысячам школьников, которые уже начали свой путь в программировании.</p>
-    <a href="#courses" class="btn">Начать обучение бесплатно</a>
-  </section>
+        <!-- CSS -->
+        <div class="language-section css">
+          <div class="lang-info">
+            <h3>CSS</h3>
+            <p>CSS (Cascading Style Sheets) — стиль оформления веб-страниц. С его помощью можно красиво и современно стилизовать любую HTML-структуру.</p>
+            <ul>
+              <li>✅ Создание визуального дизайна сайтов</li>
+              <li>✅ Поддержка адаптивности под устройства</li>
+              <li>✅ Модные эффекты и анимации</li>
+              <li>✅ Гибкость и кроссбраузерность</li>
+            </ul>
+          </div>
+          <div class="code-block">
+            <pre><code>/* Пример CSS */
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}</code></pre>
+          </div>
+          <div class="video-placeholder">
+            <h4>Видеоурок</h4>
+            <div class="video-container">
+              <p>Место для видеоурока</p>
+            </div>
+          </div>
+          <div class="quiz">
+            <h4>Тест по CSS</h4>
+            <form class="quiz-form">
+              <label for="q3">Какое свойство выравнивает элементы по центру?</label>
+              <select id="q3" name="q3" required>
+                <option value="">-- Выберите --</option>
+                <option value="justify-content">justify-content</option>
+                <option value="align-items">align-items</option>
+                <option value="text-align">text-align</option>
+              </select>
+              <button type="submit" class="btn small">Проверить</button>
+              <p class="result-message" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="features" aria-labelledby="features-heading">
+      <h2 id="features-heading">Почему именно мы?</h2>
+      <div class="feature-grid">
+        <div class="feature-item">
+          <h3>Удобное обучение</h3>
+          <p>Интерактивные уроки и практические задания помогут быстро освоить новый материал.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Безопасная среда</h3>
+          <p>Все материалы проверены и подходят для школьников.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Поддержка сообщества</h3>
+          <p>Общайся с другими студентами, задавай вопросы и получай помощь.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Registration -->
+    <section class="register" id="register" aria-labelledby="register-heading">
+      <h2 id="register-heading">Регистрация</h2>
+      <form id="registration-form">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" placeholder="Имя" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" placeholder="Пароль" required>
+
+        <button type="submit" class="btn">Зарегистрироваться</button>
+        <p class="form-result" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">Готов начать?</h2>
+      <p>Присоединяйся к тысячам школьников, которые уже начали свой путь в программировании.</p>
+      <a href="#courses" class="btn">Начать обучение бесплатно</a>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer>
-    &copy; 2025 CodeSchool for Students. Все права защищены.
+    <p>&copy; 2025 CodeSchool for Students. Все права защищены.</p>
   </footer>
 
-  <!-- Подключаем JS -->
+  <!-- JS -->
   <script src="js/script.js"></script>
 </body>
 </html>
